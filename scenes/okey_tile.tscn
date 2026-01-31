@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c0ga3dky3k20a"]
+
+[ext_resource type="Script" uid="uid://crosnf76wrrtw" path="res://scripts/okey_tile.gd" id="1_y5uxn"]
+
+[node name="OkeyTile" type="ColorRect" unique_id=192644275]
+offset_right = 50.0
+offset_bottom = 70.0
+color = Color(0.98339444, 0.96837276, 0.7965098, 1)
+script = ExtResource("1_y5uxn")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1144537502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+theme_override_font_sizes/font_size = 40
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
