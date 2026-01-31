@@ -4,6 +4,7 @@ var bag:Array
 var hand:Array
 var hand_size:int = 14
 var okey_tile_scene: PackedScene = preload("res://scenes/okey_tile.tscn")
+var viewport = DisplayServer.window_get_size()
 
 func fill_bag_with_starter_tiles():
 	var starter_colors:Array = ["black", "red", "blue", "yellow"]
@@ -13,6 +14,9 @@ func fill_bag_with_starter_tiles():
 			new_tile.okey_tile_color = tile_color
 			new_tile.okey_tile_number = tile_number
 			bag.append(new_tile)
+			#new_tile.position = Vector2
+			new_tile.position.x = randf_range(1, viewport.x)
+			new_tile.position.y = randf_range(1, viewport.y)
 			add_child(new_tile)
 	
 func draw_starter_tiles_to_hand():
