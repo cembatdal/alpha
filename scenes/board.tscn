@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bo4eccdnmkxoq"]
+
+[ext_resource type="Script" uid="uid://d30vwmu35lcol" path="res://scripts/board.gd" id="1_bw3vb"]
+[ext_resource type="PackedScene" uid="uid://ba1fd2uwaypfb" path="res://scenes/okey_slot.tscn" id="2_tx6nw"]
+
+[node name="Board" type="Control" unique_id=88359174]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_bw3vb")
+
+[node name="BoardStructure" type="VBoxContainer" parent="." unique_id=1197369111]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 5
+alignment = 2
+
+[node name="TopFloor" type="HBoxContainer" parent="BoardStructure" unique_id=1777648651]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+alignment = 1
+
+[node name="SlotTop-01" parent="BoardStructure/TopFloor" unique_id=1100347229 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-02" parent="BoardStructure/TopFloor" unique_id=1422715869 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-03" parent="BoardStructure/TopFloor" unique_id=336808296 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-04" parent="BoardStructure/TopFloor" unique_id=1029419675 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-05" parent="BoardStructure/TopFloor" unique_id=1899779361 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-06" parent="BoardStructure/TopFloor" unique_id=1064227904 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-07" parent="BoardStructure/TopFloor" unique_id=1826302699 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-08" parent="BoardStructure/TopFloor" unique_id=592170535 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-09" parent="BoardStructure/TopFloor" unique_id=606103771 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotTop-10" parent="BoardStructure/TopFloor" unique_id=27304949 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="BottomFloor" type="HBoxContainer" parent="BoardStructure" unique_id=1069853910]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+alignment = 1
+
+[node name="SlotBottom-01" parent="BoardStructure/BottomFloor" unique_id=1782189386 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-02" parent="BoardStructure/BottomFloor" unique_id=1251724112 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-03" parent="BoardStructure/BottomFloor" unique_id=1778260543 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-04" parent="BoardStructure/BottomFloor" unique_id=1494030813 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-05" parent="BoardStructure/BottomFloor" unique_id=1636337188 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-06" parent="BoardStructure/BottomFloor" unique_id=2063979350 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-07" parent="BoardStructure/BottomFloor" unique_id=658854449 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-08" parent="BoardStructure/BottomFloor" unique_id=132319331 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-09" parent="BoardStructure/BottomFloor" unique_id=962189839 instance=ExtResource("2_tx6nw")]
+layout_mode = 2
+
+[node name="SlotBottom-10" parent="BoardStructure/BottomFloor" unique_id=2118582240 instance=ExtResource("2_tx6nw")]
+layout_mode = 2

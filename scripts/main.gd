@@ -6,8 +6,7 @@ var hand_size:int = 14
 var okey_tile_scene: PackedScene = preload("res://scenes/okey_tile.tscn")
 var viewport = DisplayServer.window_get_size()
 
-@onready var board_top_floor_node = $CanvasLayer/BoardStructure/TopFloor
-@onready var board_bottom_floor_node = $CanvasLayer/BoardStructure/BottomFloor
+@onready var game_board = $CanvasLayer/OkeyBoard
 
 func fill_bag_with_starter_tiles():
 	var starter_colors:Array = ["black", "red", "blue", "green"]
@@ -22,15 +21,21 @@ func fill_bag_with_starter_tiles():
 			#add_child(new_tile)
 
 func draw_starter_tiles_to_hand():
+	bag.shuffle()
+	
+	# Board'a soruyoruz: "Hey, elindeki slotları bana ver"
+	var tum_slotlar = game_board.get_all_slots()
+	
 	for i in range(hand_size):
-		var chosen_tile = bag.pick_random()
+		if i >= tum_slotlar.size():
+			break
+			
+		var chosen_tile = bag.pop_back()
 		hand.append(chosen_tile)
-		bag.erase(chosen_tile)
-		if i < 7:
-			board_top_floor_node.add_child(chosen_tile)
-		else:
-			board_bottom_floor_node.add_child(chosen_tile)
-
+		
+		var hedef_slot = tum_slotlar[i]
+		hedef_slot.add_child(chosen_tile)
+		chosen_tile.position = Vector2.ZERO
 func _ready() -> void:
 	fill_bag_with_starter_tiles()
 	print(bag.size())
