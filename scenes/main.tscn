@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://ckkty8th0oluj"]
 
 [ext_resource type="Script" uid="uid://dswjyle3vawm3" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bo4eccdnmkxoq" path="res://scenes/board.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D" unique_id=490376904]
 script = ExtResource("1_o5qli")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1530422218]
+
+[node name="Board" parent="CanvasLayer" unique_id=88359174 instance=ExtResource("2_0wfyh")]

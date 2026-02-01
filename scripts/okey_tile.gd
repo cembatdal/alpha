@@ -26,28 +26,28 @@ func _ready():
 	$Label.add_theme_color_override("font_outline_color", Color(0.0, 0.0, 0.0, 1.0))
 
 func _get_drag_data(_at_position):
-	var preview = self.duplicate()
-	#preview.modulate.a = 0.7 # Hafif şeffaf
-	#preview.rotation_degrees = 5 # Havalı duruş
 	
-	# Preview'ın merkezden tutulması için ayar
+	var preview = self.duplicate()
+	
+	preview.okey_tile_color = okey_tile_color
+	preview.okey_tile_number = okey_tile_number
+	
+	#preview.modulate.a = 0.8 
+	#preview.rotation_degrees = 5
+	
 	var c = Control.new()
 	c.add_child(preview)
 	preview.position = -0.5 * size
 	set_drag_preview(c)
 	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
 	self.visible = false
 	
 	return self
 
-# --- SÜRÜKLEME BİTİNCE ÇALIŞAN ÖZEL FONKSİYON ---
 func _notification(what):
-	# Bu fonksiyon Godot'nun kendi sinyal mekanizmasıdır.
-	# Sürükleme işlemi bittiğinde (Başarılı veya Başarısız) tetiklenir.
 	if what == NOTIFICATION_DRAG_END:
-		# "is_drag_successful()" -> Eğer taşı geçerli bir Slota bıraktıysak TRUE döner.
-		# Eğer boşluğa veya yasaklı yere bıraktıysak FALSE döner.
-		
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if not is_drag_successful():
-			# İşlem başarısız! Eski yuvamda tekrar görünür olayım.
 			self.visible = true
