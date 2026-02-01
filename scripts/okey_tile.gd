@@ -14,10 +14,12 @@ func _init(chosen_tile_color = "black", chosen_tile_number = 1) -> void:
 func _ready():
 	$Label.text = str(okey_tile_number)
 	if okey_tile_color == "black":
-		$Label.font_color = Color(0.2, 0.2, 0.2, 1.0)
+		$Label.add_theme_color_override("font_color",Color(0.2, 0.2, 0.2, 1.0))
 	elif okey_tile_color == "blue":
-		$Label.font_color = Color(0.1, 0.4, 1.0, 1)
-	elif okey_tile_color == "yellow":
-		$Label.font_color = Color(1.0, 0.9, 0.4, 1.0)
+		$Label.add_theme_color_override("font_color",Color(0.1, 0.4, 1.0, 1))
+	elif okey_tile_color == "green":
+		$Label.add_theme_color_override("font_color",Color(0.4, 1.0, 0.4, 1.0))
 	elif okey_tile_color == "red":
-		$Label.font_color = Color(1.0, 0.4, 0.3, 1.0)
+		$Label.add_theme_color_override("font_color",Color(1.0, 0.4, 0.3, 1.0))
+	$Label.add_theme_constant_override("outline_size", 2)
+	$Label.add_theme_color_override("font_outline_color", Color(0.0, 0.0, 0.0, 1.0))

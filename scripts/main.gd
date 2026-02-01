@@ -7,7 +7,7 @@ var okey_tile_scene: PackedScene = preload("res://scenes/okey_tile.tscn")
 var viewport = DisplayServer.window_get_size()
 
 func fill_bag_with_starter_tiles():
-	var starter_colors:Array = ["black", "red", "blue", "yellow"]
+	var starter_colors:Array = ["black", "red", "blue", "green"]
 	for tile_color in starter_colors:
 		for tile_number in range(1,14):
 			var new_tile = okey_tile_scene.instantiate()
