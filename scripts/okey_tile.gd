@@ -10,6 +10,7 @@ func _to_string() -> String:
 func _init(chosen_tile_color = "black", chosen_tile_number = 1) -> void:
 	okey_tile_color = chosen_tile_color
 	okey_tile_number = chosen_tile_number
+	custom_minimum_size = Vector2(50,70)
 
 func _ready():
 	$Label.text = str(okey_tile_number)
